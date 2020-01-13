@@ -1,10 +1,10 @@
 const arr =[];
 const insert=()=>{
   var ele=prompt('Enter Element to add');
-  arr.unshift(ele);  
+  arr.push(ele);  
 }
 const delet =()=>{
-  arr.length >= 1 ? arr.pop()  : alert('Nothing to Delete')  ;
+  arr.length >= 1 ? arr.shift()  : alert('Nothing to Delete')  ;
 }
 const display=()=>{
   arr.length >= 1 ? console.log(`Array:-${arr}`) : console.log('Empty Array');
