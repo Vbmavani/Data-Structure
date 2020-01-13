@@ -1,13 +1,13 @@
-const arr =[];
-const insert=()=>{
+const collection =[];
+const enqueue=()=>{
   var ele=prompt('Enter Element to add');
-  arr.push(ele);  
+  collection.push(ele);  
 }
-const delet =()=>{
-  arr.length >= 1 ? arr.shift()  : alert('Nothing to Delete')  ;
+const dequeue =()=>{
+  collection.length >= 1 ? collection.shift()  : alert('Nothing to Delete')  ;
 }
 const display=()=>{
-  arr.length >= 1 ? console.log(`Array:-${arr}`) : console.log('Empty Array');
+  collection.length >= 1 ? console.log(`Array:-${collection}`) : console.log('Empty Array');
 }
 var i =1
 do{
@@ -19,10 +19,10 @@ do{
   `));
   switch(ope){
     case 1 : 
-      insert()
+      enqueue()
       break;
     case 2:
-      delet()
+      dequeue()
       break;
     case 3:
       display()
@@ -33,4 +33,4 @@ do{
   i = Number(prompt('Do you want to continue?enter 1  otherwise press 0'));
 }while(i==1);
 //}while(confirm('do you want to Continue?'));
-console.log(`Final Array ${arr} `)
+console.log(`Final Array ${collection} `)
