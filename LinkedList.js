@@ -91,12 +91,17 @@ class Node{
       let count =0;
       while(current){
         if(count == index){
-          console.log(current.data);
+            console.log('getinddexdata',current.data);
           return;
         }
         count ++;
         current =current.next;
       }
+    }
+    //------------------> Clear list<------------------
+    clearList() {
+        this.head = null;
+        this.size = 0;
     }
     //------------------>Print List Node <------------------
     PrintNode(){
@@ -115,8 +120,8 @@ class Node{
   ll.insertLast(400);
   //ll.insertAt(122,2);
   ll.removeAt(3)
-  
-  //ll.getAt(2);
+  ll.clearList();
+  ll.getAt(0);
   ll.PrintNode()
   console.log(ll);
   
