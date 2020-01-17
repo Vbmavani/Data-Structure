@@ -50,7 +50,7 @@ class Node{
      let prev , current ;
      current = this.head;
      let count =0;
-      //console.log('this.head',this.head,'prev',prev,'current',current);
+        console.log('this.head',this.head,'prev',prev,'current',current);
      while(count <index){
        prev = current ;
        current = current.next;
@@ -58,7 +58,7 @@ class Node{
      }
      node.next = current;
      prev.next =node;
-     //console.log('this.head',this.head,'prev',prev,'current',current);
+     console.log('this.head',this.head,'prev',prev,'current',current);
     }
     
     //------------------>Remove at index<------------------
@@ -119,9 +119,9 @@ class Node{
   ll.insertFirst(300);
   ll.insertLast(400);
   //ll.insertAt(122,2);
-  ll.removeAt(3)
-  ll.clearList();
-  ll.getAt(0);
+  //ll.removeAt(3)
+  //ll.clearList();
+  //ll.getAt(0);
   ll.PrintNode()
   console.log(ll);
   
