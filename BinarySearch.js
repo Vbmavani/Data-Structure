@@ -31,5 +31,8 @@ var BinarySearch =(ele)=>{
 BinarySearch(57);
 // BinarySearch(0);
 //BinarySearch(167);
-
 //BinarySearch(11);
+
+//Time Complexity
+//Best case : o(1)
+//average : log(n)
