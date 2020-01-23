@@ -14,4 +14,4 @@ var SelectionSort=(arr,n)=>{
   console.log(arr);
   }
   SelectionSort(arr=[19,8,6,25,3],arr.length);
-  
+  //  selectionSort(arr=['asdf','sdf','sdfr','yatsdfq','vadsfa'],arr.length)
