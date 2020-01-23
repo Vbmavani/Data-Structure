@@ -1,5 +1,5 @@
  //Time complexity = O(n^2)
- //best case = O(n)
+ //best case =O(n)
  var swap = (ele1,ele2)=>{
     temp =ele1;
     ele1= ele2;
