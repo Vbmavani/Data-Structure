@@ -1,4 +1,6 @@
-var swap = (ele1,ele2)=>{
+ //Time complexity = O(n^2)
+ //best case = O(n)
+ var swap = (ele1,ele2)=>{
     temp =ele1;
     ele1= ele2;
     ele2 = temp; 
@@ -6,13 +8,17 @@ var swap = (ele1,ele2)=>{
   }
   
   var bubbleSort= (arr,n)=>{
-    for(i=0;i<n;i++){
-      for(j=0;j<n;j++){
+    for(i=0;i<n-1;i++){     //we can use//for(i=0;i<n;i++) <--decrease time complexity     
+      var flag = 0;
+      for(j=0;j<n-i-1;j++){   //we can use//for(i=0;i<n;i++) <--decrease time complexity 
         if(arr[j]>arr[j+1]){
          [arr[j],arr[j+1]] = swap(arr[j],arr[j+1]);
+         flag = 1;
         }
       }
-    }
+      if(flag == 0){return arr;}   //decrease the time complexity //don't needed 
+                                   //pass[1,2,3,4,5,6]  autamatically return array.it does't execute whole code 
+    } 
     return arr;
   }
   arr=bubbleSort(arr=[2,4,1,3,32,1,12],arr.length);
