@@ -1,5 +1,5 @@
 //Time complexity = O(n^2)
-
+  
 var SelectionSort=(arr,n)=>{
   
     for(i=0;i<n-1;i++){
