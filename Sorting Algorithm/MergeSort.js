@@ -1,4 +1,6 @@
-const list = [1,5,89,2,66,4,7]
+//Time Complexity= nlog(n)
+//const list = [1,5,89,2,66,4,7]
+const list =[4,3,2,1];
 
 const mergeSort = (list) =>{
   if(list.length <= 1) return list;
