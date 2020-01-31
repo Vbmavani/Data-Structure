@@ -19,6 +19,9 @@ class Node {
         const searchTree=(node)=>{
           if(data<node.data){
             if(node.left === null){
+              console.log('searchTree',data,this.root,node);
+              debugger;
+              
               node.left = new Node(data);
               return;
             }else{
@@ -59,21 +62,19 @@ class Node {
     }
     //Check the element is present or not
     isPresent(data){
-      var node = this.root;
-      if(node === null || data < this.findMin() || data > this.findMax() ){
-        return null;  //return null if element is not present
-      }
-      var elepresent =(node)=>{
-        if(node.data == data){
-          return data;
-        }else if(data < node.data ){
-          return elepresent(node.left);
-        }else if(data >node.data){
-          return node.right;
+      var current = this.root;
+      console.log(this.root,current)
+      //debugger;
+      
+      while(current){
+        if(data === current.data){   return true; }
+        if(data<current.data){
+          current = current.left;
+        }else if(data > current.data){
+          current = current.right;
         }
-  
       }
-      return elepresent(node);
+      return false;
     }
   }
   var bst = new BST;
@@ -89,5 +90,5 @@ class Node {
   console.log('Smallest element',bst.findMin());
   console.log('Largest element',bst.findMax());
   
-  console.log('isPresent',bst.isPresent(12));
+  console.log('isPresent',bst.isPresent(14));
   console.log(bst);
