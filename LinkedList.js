@@ -52,7 +52,7 @@ class Node{
      let count =0;
         console.log('this.head',this.head,'prev',prev,'current',current);
      while(count <index){
-       prev = current ;
+       prev = current ; 
        current = current.next;
        count++;     
      }
