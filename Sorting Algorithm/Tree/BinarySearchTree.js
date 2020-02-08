@@ -107,6 +107,19 @@ class BST{
     traverse(curr);
     return result;
   }
+  levelOrder(){
+    var result=[];
+    var q =[];
+    q.push(this.root);
+    while(q.length > 0){
+      result.push(q[0].data)
+      if(q[0].left){q.push(q[0].left)}
+      if(q[0].right){q.push(q[0].right)}
+      q.shift();
+    }
+    return result;
+
+  }
   
 } 
 var bst = new BST;
@@ -126,4 +139,5 @@ console.log('isPresent',bst.isPresent(14));
 console.log('preOrder',bst.preOrder());
 console.log('inOrder',bst.inOrder());
 console.log('postOrder',bst.postOrder());
+console.log('levelOrder',bst.levelOrder());
 console.log(bst);
