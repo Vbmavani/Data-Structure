@@ -1,23 +1,18 @@
 function quickSort(arr, left, right){
-  var len = arr.length, 
-  pivot,
-  partitionIndex;
-
-
- if(left < right){
-   pivot = right;
-   partitionIndex = partition(arr, pivot, left, right);
+  var partitionIndex;
+  if(left < right){
+   partitionIndex = partition(arr, left, right);
    
   //sort left and right
   quickSort(arr, left, partitionIndex - 1);
   quickSort(arr, partitionIndex + 1, right);
- }
+  }
  return arr;
 }
        
 
-function partition(arr, pivot, left, right){
-  var pivotValue = arr[pivot],
+function partition(arr, left, right){
+  var pivotValue = arr[right],
       partitionIndex = left;
 
   for(var i = left; i < right; i++){
