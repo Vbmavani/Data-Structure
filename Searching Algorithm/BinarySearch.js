@@ -8,7 +8,7 @@ var BinarySearch =(ele)=>{
     l=0;
     r=arr.length -1;
     
-    for(i=0;i<arr.length;i++){
+    for(i= l; i< r ;i++){
         mid =Math.floor((l+r+1)/2);
         //console.log('left,mid,right',l,mid,r);
         if(arr[mid] == ele){
@@ -29,6 +29,7 @@ var BinarySearch =(ele)=>{
 }
 
 BinarySearch(57);
+
 // BinarySearch(0);
 //BinarySearch(167);
 //BinarySearch(11);
